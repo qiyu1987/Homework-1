@@ -9,10 +9,24 @@
 
 
   <!-- 👍 YOUR HTML HERE 👍 -->
-
-  <img id="inn" onclick="rest(hero)" src="https://cdn1.iconfinder.com/data/icons/building-vol-3-3/512/13-512.png" alt="An Inn to have some rest">
-  <img id="dagger" onclick="pickUpItem(hero,dagger)" src="https://cdn1.iconfinder.com/data/icons/adventure-outline-1/64/Adventure-Line-06-256.png" alt="A dagger">
-  <img id="bag" onclick="equipWeapon(hero)" src="https://cdn0.iconfinder.com/data/icons/sports-android-l-lollipop-icon-pack/24/chalk_bag-256.png" alt="Your Inventory">
+  <!-- Change Hero's Name -->
+  <section id="changeName">
+    <button onclick="changeYourHeroName(hero)">Change Name</button>
+  </section>
+  <!-- Passive Status Change - fight enemy or pick up item -->
+  <br>
+  <section id="enemysAndItems">
+    <img id="enemy" onclick="fight(hero, enemy)" src="https://cdn2.iconfinder.com/data/icons/veterinary-line-fluffy-pet/512/Hamster-256.png" alt="An enemy">
+    <img id="dagger" onclick="pickUpItem(hero,dagger)" src="https://cdn1.iconfinder.com/data/icons/adventure-outline-1/64/Adventure-Line-06-256.png" alt="A dagger">
+  </section>
+  <!-- Active Status Change - user choice of rest or equip weapon -->
+  <br>
+  <section id="userOption">
+    <img id="inn" onclick="rest(hero)" src="https://cdn1.iconfinder.com/data/icons/building-vol-3-3/512/13-512.png" alt="An Inn to have some rest">
+    <img id="bag" onclick="equipWeapon(hero)" src="https://cdn0.iconfinder.com/data/icons/sports-android-l-lollipop-icon-pack/24/chalk_bag-256.png" alt="Your Inventory">    
+  </section>
+  <!-- Display Hero Status -->
+  <div id="heroStatus"></div>
   <br>
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
   <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
